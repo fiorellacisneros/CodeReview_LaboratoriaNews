@@ -15,15 +15,16 @@ firebase.initializeApp(config);
 
 var loadNews = (id) => {
     let url = '/news/';
-    url += (id != undefined) ? id : '';  
+    url += (id != undefined) ? id : '';
     return firebase.database().ref(url).once('value').then(function(snapshot) {
     return snapshot.val();
     });
+    // console.log(id);
 };
 
 var loadCategories = (id) => {
-    let url = '/categories/'; 
-    url += (id != undefined) ? id : '';  
+    let url = '/categories/';
+    url += (id != undefined) ? id : '';
     return firebase.database().ref(url).once('value').then(function(snapshot) {
         return snapshot.val();
     });
@@ -33,3 +34,5 @@ module.exports = {
     news : loadNews,
     categories : loadCategories
 };
+
+// console.log(loadNews.news);

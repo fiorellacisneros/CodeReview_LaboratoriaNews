@@ -61,34 +61,34 @@ gulp.task("js", () => {
         .pipe(gulp.dest(config.dist + paths.assets + "js"));
 });
 
-gulp.task("png-watch", ["png"], (done) => {
-    browserSync.reload();
-    done();
-});
-
-gulp.task("sass-watch", ["sass"], (done) => {
-    browserSync.reload();
-    done();
-});
-
-gulp.task("js-watch", ["js"], (done) => {
-    browserSync.reload();
-    done();
-});
-
-gulp.task("html-watch", ["html"], (done) => {
-    browserSync.reload();
-    done();
-});
-
-gulp.task("serve", () => {
-    browserSync.init({
-        server: {
-            baseDir: config.dist
-        }
-    });
-    gulp.watch(sources.html, ["html-watch"]);
-    gulp.watch(sources.sass, ["sass-watch"]);
-    gulp.watch(sources.png, ["png-watch"]);
-    gulp.watch(sources.js, ["js-watch"]);
-});
+// gulp.task("png-watch", ["png"], (done) => {
+//     browserSync.reload();
+//     done();
+// });
+//
+// gulp.task("sass-watch", ["sass"], (done) => {
+//     browserSync.reload();
+//     done();
+// });
+//
+// gulp.task("js-watch", ["js"], (done) => {
+//     browserSync.reload();
+//     done();
+// });
+//
+// gulp.task("html-watch", ["html"], (done) => {
+//     browserSync.reload();
+//     done();
+// });
+//
+// gulp.task("serve", () => {
+//     browserSync.init({
+//         server: {
+//             baseDir: config.dist
+//         }
+//     });
+//     gulp.watch(sources.html, ["html-watch"]);
+//     gulp.watch(sources.sass, ["sass-watch"]);
+//     gulp.watch(sources.png, ["png-watch"]);
+//     gulp.watch(sources.js, ["js-watch"]);
+// });
