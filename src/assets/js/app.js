@@ -7,6 +7,8 @@ const render = (root) => {
     container.append(Row1());
     container.append(Mundo())
     container.append(Row2());
+    container.append(Tecnologia());
+    container.append(Row3());
 
     root.append(container);
 }

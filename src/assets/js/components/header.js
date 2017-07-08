@@ -105,6 +105,7 @@ const Mundo = () =>{
   principal.append(h2, hr);
   return principal;
 }
+
 const Row2 = () =>{
   const row = $('<div class="row"></div>');
   const columnLeft = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
@@ -145,7 +146,7 @@ const Row2 = () =>{
       columnB.append(columnB2);
       columnB2.append(textB2);
 
-    const columnC = $('<div class="completoDiv"></div>');
+    const columnC = $('<div class="height-medio completoDiv"></div>');
     const columnC1 = $('<div class="medioDiv"></div>');
       const imagC1 = $('<img src="assets/img/'+state.dataNews[9].img+'" alt="">')
     const columnC2 = $('<div class="info-plomo medioDiv"></div>');
@@ -157,7 +158,7 @@ const Row2 = () =>{
       columnC.append(columnC2);
       columnC2.append(textC2);
 
-    const columnD = $('<div class="completoDiv"></div>');
+    const columnD = $('<div class="height-medio completoDiv"></div>');
     const columnD1 = $('<div class="medioDiv"></div>');
       const imagD1 = $('<img src="assets/img/'+state.dataNews[8].img+'" alt="">')
     const columnD2 = $('<div class="info-plomo medioDiv"></div>');
@@ -181,5 +182,80 @@ const Row2 = () =>{
     columnRight.append(columnR2);
     columnR2.append(textR2);
 
+  return row;
+}
+
+const Tecnologia = () =>{
+  const principal = $('<div class="principal"></div>');
+  const h2 = $('<h2>TECNOLOGIA</h2>');
+  const hr = $('<hr>');
+
+  principal.append(h2, hr);
+  return principal;
+}
+
+const Row3 =() => {
+  const row = $('<div class="row"></div>');
+  const columnLeft = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
+  const columnL1 = $('<div class="completoDiv"></div>');
+    const imagL1 = $('<img src="assets/img/'+state.dataNews[14].img+'" alt="">')
+  const columnL2 = $('<div class="info-plomo completoDiv"></div>');
+    const textL2 = $('<p>'+state.dataNews[14].title+'</p>');
+    row.append(columnLeft);
+    columnLeft.append(columnL1);
+    columnL1.append(imagL1);
+    columnLeft.append(columnL2);
+    columnL2.append(textL2);
+
+  const columnCenter = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
+
+    const columnA = $('<div class="hidden-xs completo-sm"></div>');
+    const columnA1 = $('<div class="completoDiv"></div>');
+      const imagA1 = $('<img src="assets/img/'+state.dataNews[16].img+'" alt="">')
+    const columnA2 = $('<div class="info-plomo completoDiv"></div>');
+      const textA2 = $('<p>'+state.dataNews[16].title+'</p>');
+
+      row.append(columnCenter);
+      columnCenter.append(columnA)
+      columnA.append(columnA1);
+      columnA1.append(imagA1);
+      columnA.append(columnA2);
+      columnA2.append(textA2);
+
+    const columnB = $('<div class="hidden-xs medioDiv"></div>');
+    const columnB1 = $('<div class="completoDiv"></div>');
+      const imagB1 = $('<img src="assets/img/'+state.dataNews[16].img+'" alt="">')
+    const columnB2 = $('<div class="info-plomo completoDiv"></div>');
+      const textB2 = $('<p>'+state.dataNews[16].title+'</p>');
+
+      columnCenter.append(columnB)
+      columnB.append(columnB1);
+      columnB1.append(imagB1);
+      columnB.append(columnB2);
+      columnB2.append(textB2);
+
+    const columnC = $('<div class="height-medio completoDiv"></div>');
+    const columnC1 = $('<div class="medioDiv"></div>');
+      const imagC1 = $('<img src="assets/img/'+state.dataNews[17].img+'" alt="">')
+    const columnC2 = $('<div class="info-plomo medioDiv"></div>');
+      const textC2 = $('<p>'+state.dataNews[17].title+'</p>');
+
+      columnCenter.append(columnC)
+      columnC.append(columnC1);
+      columnC1.append(imagC1);
+      columnC.append(columnC2);
+      columnC2.append(textC2);
+
+    const columnD = $('<div class="height-medio completoDiv"></div>');
+    const columnD1 = $('<div class="medioDiv"></div>');
+      const imagD1 = $('<img src="assets/img/'+state.dataNews[18].img+'" alt="">')
+    const columnD2 = $('<div class="info-plomo medioDiv"></div>');
+      const textD2 = $('<p>'+state.dataNews[18].title+'</p>');
+
+      columnCenter.append(columnD)
+      columnD.append(columnD1);
+      columnD1.append(imagD1);
+      columnD.append(columnD2);
+      columnD2.append(textD2);
   return row;
 }
