@@ -5,6 +5,8 @@ const render = (root) => {
     container.append(NavBar());
     container.append(Principal());
     container.append(Row1());
+    container.append(Mundo())
+    container.append(Row2());
 
     root.append(container);
 }

@@ -6,7 +6,8 @@ $min-large:768px;
 
 .navbar-brand{
   img{
-  height: 100%;
+    width: auto;
+    height: 100%;
   }
 }
 .navbar-toggle{
@@ -68,6 +69,30 @@ hr{
   border: 1px solid #F7B617;
   background-color: #F7B617;
 }
+.medioDiv{
+  width: 50%;
+  display: inline-block;
+}
+
+.completoDiv{
+  width: 100%;
+}
+.medio-sm{
+  width: 50%;
+  display: inline-block;
+  @media(min-width:$min-large){
+    width: 100%;
+  }
+}
+.completo-sm{
+  width: 100%;
+  display: inline-block;
+  @media(min-width:$min-large){
+    width: 50%;
+  }
+}
+
+
 .text-news{
   margin: 20px;
   font-size: 30px;
@@ -79,21 +104,9 @@ hr{
   font-size: 15px;
   width: 500px;
 }
-.row{
-  padding: 0 !important;
-  margin-top: 10px;
-  margin-right: 0px;
-  margin-left: 0px;
-  // width: 100%;
+img{
   position: relative;
-  .col-xs-12{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  img{
-    position: relative;
-    width: 100%;
-  }
+  width: 100%;
   .info-plomo{
     text-transform: capitalize;
     background-color: #2B2B2B;
@@ -101,4 +114,35 @@ hr{
     font-size: 19px;
     padding: 16px;
   }
+}
+.img-auto{
+  width: auto;
+}
+.info-plomo{
+  height: 100%;
+  float: right;
+  text-transform: capitalize;
+  background-color: #2B2B2B;
+  color: white;
+  font-size: 19px;
+  padding: 16px;
+}
+.newsmedia{
+  // padding-left: 0;
+  overflow: hidden;
+  height: 100px;
+  // padding-right: 0;
+  @media(min-width:$min-large){
+    overflow:visible;
+    height: auto;
+  }
+}
+.medianew{
+  margin-top: 10px;
+  @media(min-width:$min-large){
+    margin-top: 0;
+  }
+}
+.row{
+  margin-top: 10px;
 }
