@@ -243,7 +243,6 @@ const Tecnologia = () =>{
   return principal;
 }
 
-
 const Row3 =() => {
   const row = $('<div class="row"></div>');
   const columnLeft = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
@@ -308,4 +307,96 @@ const Row3 =() => {
       columnD.append(columnD2);
       columnD2.append(textD2);
   return row;
+}
+
+const Educacion = () =>{
+  const principal = $('<div class="principal"></div>');
+  const h2 = $('<h2>EDUCACION</h2>');
+  const hr = $('<hr>');
+
+  principal.append(h2, hr);
+  return principal;
+}
+
+const Row4 =() =>{
+  const row = $('<div class="row"></div>');
+  const columnCenter = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
+
+    const columnA = $('<div class="completo-sm"></div>');
+    const columnA1 = $('<div class="completoDiv"></div>');
+      const imagA1 = $('<img src="assets/img/'+state.dataNews[19].img+'" alt="">')
+    const columnA2 = $('<div class="info-plomo completoDiv"></div>');
+      const textA2 = $('<p>'+state.dataNews[19].title+'</p>');
+
+      row.append(columnCenter);
+      columnCenter.append(columnA)
+      columnA.append(columnA1);
+      columnA1.append(imagA1);
+      columnA.append(columnA2);
+      columnA2.append(textA2);
+
+    const columnB = $('<div class="completo-sm"></div>');
+    const columnB1 = $('<div class="completoDiv"></div>');
+      const imagB1 = $('<img src="assets/img/'+state.dataNews[20].img+'" alt="">')
+    const columnB2 = $('<div class="info-plomo completoDiv"></div>');
+      const textB2 = $('<p>'+state.dataNews[20].title+'</p>');
+
+      columnCenter.append(columnB)
+      columnB.append(columnB1);
+      columnB1.append(imagB1);
+      columnB.append(columnB2);
+      columnB2.append(textB2);
+
+    const columnD = $('<div class="height-medio completoDiv"></div>');
+    const columnD1 = $('<div class="medioDiv"></div>');
+      const imagD1 = $('<img src="assets/img/'+state.dataNews[21].img+'" alt="">')
+    const columnD2 = $('<div class="info-plomo medioDiv"></div>');
+      const textD2 = $('<p>'+state.dataNews[21].title+'</p>');
+
+      columnCenter.append(columnD)
+      columnD.append(columnD1);
+      columnD1.append(imagD1);
+      columnD.append(columnD2);
+      columnD2.append(textD2);
+
+      const columnM = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
+
+        const columnBA = $('<div class="hidden-xs completo-sm"></div>');
+        const columnBA1 = $('<div class="completoDiv"></div>');
+          const imagBA1 = $('<img src="assets/img/'+state.dataNews[22].img+'" alt="">')
+        const columnBA2 = $('<div class="info-plomo completoDiv"></div>');
+          const textBA2 = $('<p>'+state.dataNews[22].title+'</p>');
+
+          row.append(columnM);
+          columnM.append(columnBA)
+          columnBA.append(columnBA1);
+          columnBA1.append(imagBA1);
+          columnBA.append(columnBA2);
+          columnBA2.append(textBA2);
+
+        const columnBB = $('<div class="hidden-xs completo-sm"></div>');
+        const columnBB1 = $('<div class="completoDiv"></div>');
+          const imagBB1 = $('<img src="assets/img/'+state.dataNews[23].img+'" alt="">')
+        const columnBB2 = $('<div class="info-plomo completoDiv"></div>');
+          const textBB2 = $('<p>'+state.dataNews[23].title+'</p>');
+
+          columnM.append(columnBB)
+          columnBB.append(columnBB1);
+          columnBB1.append(imagBB1);
+          columnBB.append(columnBB2);
+          columnBB2.append(textBB2);
+
+        const columnBD = $('<div class="height-medio completoDiv"></div>');
+        const columnBD1 = $('<div class="medioDiv"></div>');
+          const imagBD1 = $('<img src="assets/img/'+state.dataNews[23].img+'" alt="">')
+        const columnBD2 = $('<div class="info-plomo medioDiv"></div>');
+          const textBD2 = $('<p>'+state.dataNews[23].title+'</p>');
+
+          columnM.append(columnBD)
+          columnBD.append(columnBD1);
+          columnBD1.append(imagBD1);
+          columnBD.append(columnBD2);
+          columnBD2.append(textBD2);
+
+          return row;
 }
