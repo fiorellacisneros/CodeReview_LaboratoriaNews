@@ -185,6 +185,55 @@ const Row2 = () =>{
   return row;
 }
 
+const RowLG =()=>{
+    const row = $('<div class="hidden-xs row"></div>');
+    const column = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
+    const columnL1 = $('<div class="completoDiv"></div>');
+    const imagL1 = $('<img src="assets/img/'+state.dataNews[10].img+'" alt="">')
+    const columnL2 = $('<div class="info-plomo completoDiv"></div>');
+    const textL2 = $('<p>'+state.dataNews[10].title+'</p>');
+    row.append(column);
+    column.append(columnL1);
+    columnL1.append(imagL1);
+    column.append(columnL2);
+    columnL2.append(textL2);
+
+    const columnB = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
+    const columnBL1 = $('<div class="completoDiv"></div>');
+    const imagBL1 = $('<img src="assets/img/'+state.dataNews[11].img+'" alt="">')
+    const columnBL2 = $('<div class="info-plomo completoDiv"></div>');
+    const textBL2 = $('<p>'+state.dataNews[11].title+'</p>');
+    row.append(columnB);
+    columnB.append(columnBL1);
+    columnBL1.append(imagBL1);
+    columnB.append(columnBL2);
+    columnBL2.append(textBL2);
+
+    const columnC = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
+    const columnCL1 = $('<div class="completoDiv"></div>');
+    const imagCL1 = $('<img src="assets/img/'+state.dataNews[12].img+'" alt="">')
+    const columnCL2 = $('<div class="info-plomo completoDiv"></div>');
+    const textCL2 = $('<p>'+state.dataNews[12].title+'</p>');
+    row.append(columnC);
+    columnC.append(columnCL1);
+    columnCL1.append(imagCL1);
+    columnC.append(columnCL2);
+    columnCL2.append(textCL2);
+
+    const columnD = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
+    const columnDL1 = $('<div class="completoDiv"></div>');
+    const imagDL1 = $('<img src="assets/img/'+state.dataNews[13].img+'" alt="">')
+    const columnDL2 = $('<div class="info-plomo completoDiv"></div>');
+    const textDL2 = $('<p>'+state.dataNews[13].title+'</p>');
+    row.append(columnD);
+    columnD.append(columnDL1);
+    columnDL1.append(imagDL1);
+    columnD.append(columnDL2);
+    columnDL2.append(textDL2);
+
+    return row;
+}
+
 const Tecnologia = () =>{
   const principal = $('<div class="principal"></div>');
   const h2 = $('<h2>TECNOLOGIA</h2>');
@@ -193,6 +242,7 @@ const Tecnologia = () =>{
   principal.append(h2, hr);
   return principal;
 }
+
 
 const Row3 =() => {
   const row = $('<div class="row"></div>');
