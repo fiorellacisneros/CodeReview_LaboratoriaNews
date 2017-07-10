@@ -2382,7 +2382,7 @@ if (typeof jQuery === 'undefined') {
 const Carrusel = () =>{
   console.log("Entro al carrusel");
   const principal = $('<div class="cont_carousel"></div>');
-  const divVisible = $('<div class="owl-carousel owl-theme carousel"></div>');
+  const divVisible = $('<div class="owl-carousel owl-theme body_carosuel"></div>');
   const divImg_1 = $('<div class="item"><div class="cont_img"><img class="img-responsive" src="assets/img/'+state.dataNews[10].img+'" alt=""></div>'+
                     '<div class="text-news_carousel"><h3>'+state.dataNews[10].title+'</h3></div></div>');
   const divImg_2 = $('<div class="item"><div class="cont_img"><img class="img-responsive" src="assets/img/'+state.dataNews[11].img+'" alt=""></div>'+
@@ -2838,24 +2838,23 @@ $(_ => {
     console.log(data);
     const root = $('.root');
     render(root);
-      $(".owl-carousel").owlCarousel(
-        {
-          rtl:true,
-          loop:true,
-          margin:10,
-          nav:true,
-          responsive:{
-              0:{
-                  items:1
-              },
-              600:{
-                  items:2
-              },
-              1000:{
-                  items:4
-              }
-          }
-      });
+    $('.owl-carousel').owlCarousel({
+        rtl:false,
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:4
+            }
+        }
+    });
  });
 });
 
