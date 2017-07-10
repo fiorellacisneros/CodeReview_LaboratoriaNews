@@ -2791,8 +2791,8 @@ const Opinion = () =>{
 
 const Row5 =() =>{
   const row = $('<div class="row"></div>');
-  const col1 = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
-  const div1 = $('<div class="completoDiv"></div>');
+  const col1 = $('<div  class="medianew col-xs-12 col-md-3 col-lg-3"></div>');
+  const div1 = $('<div  class="overflow-image completoDiv"></div>');
   const imag1 = $('<img src="assets/img/'+state.dataNews[24].img+'" alt="">')
   const divTexto1 = $('<div class="info-plomo completoDiv"></div>');
   const text1 = $('<p>'+state.dataNews[24].title+'</p>');
@@ -2802,8 +2802,8 @@ const Row5 =() =>{
   div1.append(divTexto1);
   divTexto1.append(text1)
 
-  const col2 = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
-  const div2 = $('<div class="completoDiv"></div>');
+  const col2 = $('<div class="medianew col-xs-12 col-md-3 col-lg-3"></div>');
+  const div2 = $('<div class=" overflow-image completoDiv"></div>');
   const imag2 = $('<img src="assets/img/'+state.dataNews[25].img+'" alt="">')
   const divTexto2 = $('<div class="info-plomo completoDiv"></div>');
   const text2 = $('<p>'+state.dataNews[25].title+'</p>');
@@ -2813,7 +2813,7 @@ const Row5 =() =>{
   div2.append(divTexto2);
   divTexto2.append(text2)
 
-  const col3 = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
+  const col3 = $('<div class="medianew hidden-xs hidden-sm col-md-3 col-lg-3"></div>');
   const div3 = $('<div class="completoDiv"></div>');
   const imag3 = $('<img src="assets/img/'+state.dataNews[26].img+'" alt="">')
   const divTexto3 = $('<div class="info-plomo completoDiv"></div>');
@@ -2824,11 +2824,12 @@ const Row5 =() =>{
   div3.append(divTexto3);
   divTexto3.append(text3)
 
-  const col4 = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
+  const col4 = $('<div class="medianew hidden-xs col-md-3 col-lg-3"></div>');
   const div4 = $('<div class="completoDiv"></div>');
   const imag4 = $('<img src="assets/img/'+state.dataNews[27].img+'" alt="">')
   const divTexto4 = $('<div class="info-plomo completoDiv"></div>');
   const text4 = $('<p>'+state.dataNews[27].title+'</p>');
+
   row.append(col4);
   col4.append(div4);
   div4.append(imag4);
