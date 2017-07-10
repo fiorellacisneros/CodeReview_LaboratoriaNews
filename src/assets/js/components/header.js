@@ -110,12 +110,16 @@ const Row2 = () =>{
   const row = $('<div class="row"></div>');
   const columnLeft = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
   const columnL1 = $('<div class="overflow-image completoDiv"></div>');
-    const imagL1 = $('<img src="assets/img/'+state.dataNews[4].img+'" alt="">')
+    const imagL1 = $('<img src="assets/img/'+state.dataNews[4].img+'" alt="">');
+
+    const logovideo = $('<img class="icon-video" src="assets/img/play-button.png" alt="">');
   const columnL2 = $('<div class="info-plomo completoDiv"></div>');
     const textL2 = $('<p>'+state.dataNews[4].title+'</p>');
     row.append(columnLeft);
     columnLeft.append(columnL1);
     columnL1.append(imagL1);
+    columnL1.append(logovideo);
+
     columnLeft.append(columnL2);
     columnL2.append(textL2);
 
@@ -136,13 +140,15 @@ const Row2 = () =>{
 
     const columnB = $('<div class="padding-l hidden-xs medioDiv"></div>');
     const columnB1 = $('<div class="completoDiv"></div>');
-      const imagB1 = $('<img src="assets/img/'+state.dataNews[6].img+'" alt="">')
+      const imagB1 = $('<img src="assets/img/'+state.dataNews[6].img+'" alt="">');
+      const logovideo1 = $('<img class="icon-video" src="assets/img/play-button.png" alt="">');
     const columnB2 = $('<div class="info-plomo completoDiv"></div>');
       const textB2 = $('<p>'+state.dataNews[6].title+'</p>');
 
       columnCenter.append(columnB)
       columnB.append(columnB1);
       columnB1.append(imagB1);
+      columnB1.append(logovideo1);
       columnB.append(columnB2);
       columnB2.append(textB2);
 
@@ -247,12 +253,14 @@ const Row3 =() => {
   const row = $('<div class="row"></div>');
   const columnLeft = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
   const columnL1 = $('<div class="completoDiv"></div>');
-    const imagL1 = $('<img src="assets/img/'+state.dataNews[14].img+'" alt="">')
+    const imagL1 = $('<img src="assets/img/'+state.dataNews[14].img+'" alt="">');
+    const logovideo3 = $('<img class="icon-video" src="assets/img/play-button.png" alt="">');
   const columnL2 = $('<div class="info-plomo completoDiv"></div>');
     const textL2 = $('<p>'+state.dataNews[14].title+'</p>');
     row.append(columnLeft);
     columnLeft.append(columnL1);
     columnL1.append(imagL1);
+    columnL1.append(logovideo3);
     columnLeft.append(columnL2);
     columnL2.append(textL2);
 
@@ -337,13 +345,15 @@ const Row4 =() =>{
 
     const columnB = $('<div class="medianew padding-l completo-sm"></div>');
     const columnB1 = $('<div class="completoDiv"></div>');
-      const imagB1 = $('<img src="assets/img/'+state.dataNews[20].img+'" alt="">')
+      const imagB1 = $('<img src="assets/img/'+state.dataNews[20].img+'" alt="">');
+      const logovideo4 = $('<img class="icon-video" src="assets/img/play-button.png" alt="">');
     const columnB2 = $('<div class="info-plomo completoDiv"></div>');
       const textB2 = $('<p>'+state.dataNews[20].title+'</p>');
 
       columnCenter.append(columnB)
       columnB.append(columnB1);
       columnB1.append(imagB1);
+      columnB1.append(logovideo4);
       columnB.append(columnB2);
       columnB2.append(textB2);
 

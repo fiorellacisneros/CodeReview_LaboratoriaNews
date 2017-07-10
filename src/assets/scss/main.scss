@@ -143,6 +143,7 @@ img{
     margin-top: 0;
   }
 }
+
 .row{
   margin-top: 10px;
 }
@@ -173,4 +174,12 @@ img{
     overflow:visible;
     height: 100%;
   }
+}
+
+.icon-video{
+  display: inline-block;
+  position: absolute;
+  width: 70px;
+  right: 40px;
+  top: 20px;
 }
