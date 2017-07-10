@@ -18,6 +18,7 @@ var gulp = require('gulp'),
         mainSass: "scss/main.scss",
         mainJS: "js/app.js",
         js: "js/components/**.js",
+        owl: "owlcarousel/**/**.*",
         bootstrap: 'bootstrap/dist/'
     },
     sources = {
@@ -28,6 +29,7 @@ var gulp = require('gulp'),
         png: config.source + paths.assets + paths.png,
         js: config.source + paths.assets + paths.js,
         rootJS: config.source + paths.assets + paths.mainJS,
+        owlCarousel:config.source + paths.assets + paths.owl,
         bootstrapCSS: config.modules + paths.bootstrap + "css/bootstrap.min.css",
         bootstrapJS: config.modules + paths.bootstrap + "js/bootstrap.min.js"
     };
@@ -53,6 +55,11 @@ gulp.task('png', () => {
         .pipe(gulp.dest(config.dist + paths.assets + "img"));
 });
 
+gulp.task('carrusel', () => {
+    gulp.src(sources.owlCarousel)
+        .pipe(gulp.dest(config.dist + paths.assets + "owlcarousel"));
+});
+
 gulp.task("js", () => {
     gulp.src([sources.js, sources.rootJS])
         .pipe(concat(sources.rootJS))
@@ -61,34 +68,39 @@ gulp.task("js", () => {
         .pipe(gulp.dest(config.dist + paths.assets + "js"));
 });
 
-// gulp.task("png-watch", ["png"], (done) => {
-//     browserSync.reload();
-//     done();
-// });
-//
-// gulp.task("sass-watch", ["sass"], (done) => {
-//     browserSync.reload();
-//     done();
-// });
-//
-// gulp.task("js-watch", ["js"], (done) => {
-//     browserSync.reload();
-//     done();
-// });
-//
-// gulp.task("html-watch", ["html"], (done) => {
-//     browserSync.reload();
-//     done();
-// });
-//
-// gulp.task("serve", () => {
-//     browserSync.init({
-//         server: {
-//             baseDir: config.dist
-//         }
-//     });
-//     gulp.watch(sources.html, ["html-watch"]);
-//     gulp.watch(sources.sass, ["sass-watch"]);
-//     gulp.watch(sources.png, ["png-watch"]);
-//     gulp.watch(sources.js, ["js-watch"]);
-// });
+
+gulp.task("png-watch", ["png"], (done) => {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("sass-watch", ["sass"], (done) => {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("js-watch", ["js"], (done) => {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("html-watch", ["html"], (done) => {
+    browserSync.reload();
+    done();
+});
+
+
+
+gulp.task("serve", () => {
+    browserSync.init({
+        server: {
+            baseDir: config.dist
+        }
+    });
+    gulp.watch(sources.html, ["html-watch"]);
+    gulp.watch(sources.sass, ["sass-watch"]);
+    gulp.watch(sources.png, ["png-watch"]);
+    gulp.watch(sources.js, ["js-watch"]);
+});
+
+gulp.task('run', [ 'png-watch','sass-watch','js-watch','html-watch', 'carrusel', 'serve']);

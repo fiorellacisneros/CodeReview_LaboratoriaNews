@@ -12,7 +12,8 @@ const render = (root) => {
     container.append(Row3());
     container.append(Educacion());
     container.append(Row4());
-
+    container.append(Carrusel());
+    container.append(espacio());
     root.append(container);
 }
 
@@ -29,5 +30,23 @@ $(_ => {
     console.log(data);
     const root = $('.root');
     render(root);
+      $(".owl-carousel").owlCarousel(
+        {
+          rtl:true,
+          loop:true,
+          margin:10,
+          nav:true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:2
+              },
+              1000:{
+                  items:4
+              }
+          }
+      });
  });
 });

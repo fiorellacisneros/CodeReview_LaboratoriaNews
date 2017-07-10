@@ -2377,6 +2377,32 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
+'use strict';
+
+const Carrusel = () =>{
+  console.log("Entro al carrusel");
+  const principal = $('<div class="cont_carousel"></div>');
+  const divVisible = $('<div class="owl-carousel owl-theme carousel"></div>');
+  const divImg_1 = $('<div class="item"><div class="cont_img"><img class="img-responsive" src="assets/img/'+state.dataNews[10].img+'" alt=""></div>'+
+                    '<div class="text-news_carousel"><h3>'+state.dataNews[10].title+'</h3></div></div>');
+  const divImg_2 = $('<div class="item"><div class="cont_img"><img class="img-responsive" src="assets/img/'+state.dataNews[11].img+'" alt=""></div>'+
+                    '<div class="text-news_carousel"><h3>'+state.dataNews[11].title+'</h3></div></div>');
+  const divImg_3 = $('<div class="item"><div class="cont_img"><img class="img-responsive" src="assets/img/'+state.dataNews[12].img+'" alt=""></div>'+
+                    '<div class="text-news_carousel"><h3>'+state.dataNews[12].title+'</h3></div></div>');
+  const divImg_4 = $('<div class="item"><div class="cont_img"><img class="img-responsive" src="assets/img/'+state.dataNews[13].img+'" alt=""></div>'+
+                    '<div class="text-news_carousel"><h3>'+state.dataNews[13].title+'</h3></div></div>');
+  divVisible.append(divImg_1);
+  divVisible.append(divImg_2);
+  divVisible.append(divImg_3);
+  divVisible.append(divImg_4);
+  principal.append(divVisible);
+  return principal;
+}
+const espacio = () =>{
+  const principal = $('<div class="espacio"></div>');
+  return principal;
+}
+
 
 const Header = () =>{
   const top = $('<div class="hidden-xs center height-header"></div>');
@@ -2447,15 +2473,15 @@ const Row1 = () =>{
   const boxPlomo = $('<div class="info-plomo"></div>');
   const h2 = $('<p>'+state.dataNews[1].title+'</p>');
   const column2 = $('<div class="newsmedia medianew col-xs-12 col-md-3 col-lg-3"></div>');
-    const column21 = $('<div class="medio-sm"></div>');
-      const imag21 = $('<img src="assets/img/'+state.dataNews[2].img+'" alt="">')
-    const column22 = $('<div class="info-plomo medio-sm"></div>');
-      const text22 = $('<p>'+state.dataNews[2].title+'</p>');
+  const column21 = $('<div class="medio-sm"></div>');
+  const imag21 = $('<img src="assets/img/'+state.dataNews[2].img+'" alt="">')
+  const column22 = $('<div class="info-plomo medio-sm"></div>');
+  const text22 = $('<p>'+state.dataNews[2].title+'</p>');
   const column3 = $('<div class="newsmedia medianew col-xs-12 col-md-3 col-lg-3"></div>');
   const column31 = $('<div class="medio-sm"></div>');
-    const imag31 = $('<img src="assets/img/'+state.dataNews[3].img+'" alt="">')
+  const imag31 = $('<img src="assets/img/'+state.dataNews[3].img+'" alt="">')
   const column32 = $('<div class="info-plomo medio-sm"></div>');
-    const text32 = $('<p>'+state.dataNews[3].title+'</p>');
+  const text32 = $('<p>'+state.dataNews[3].title+'</p>');
 
   row.append(column);
   column.append(imagen);
@@ -2794,7 +2820,8 @@ const render = (root) => {
     container.append(Row3());
     container.append(Educacion());
     container.append(Row4());
-
+    container.append(Carrusel());
+    container.append(espacio());
     root.append(container);
 }
 
@@ -2811,6 +2838,24 @@ $(_ => {
     console.log(data);
     const root = $('.root');
     render(root);
+      $(".owl-carousel").owlCarousel(
+        {
+          rtl:true,
+          loop:true,
+          margin:10,
+          nav:true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:2
+              },
+              1000:{
+                  items:4
+              }
+          }
+      });
  });
 });
 

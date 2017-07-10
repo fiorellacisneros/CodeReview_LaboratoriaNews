@@ -68,15 +68,15 @@ const Row1 = () =>{
   const boxPlomo = $('<div class="info-plomo"></div>');
   const h2 = $('<p>'+state.dataNews[1].title+'</p>');
   const column2 = $('<div class="newsmedia medianew col-xs-12 col-md-3 col-lg-3"></div>');
-    const column21 = $('<div class="medio-sm"></div>');
-      const imag21 = $('<img src="assets/img/'+state.dataNews[2].img+'" alt="">')
-    const column22 = $('<div class="info-plomo medio-sm"></div>');
-      const text22 = $('<p>'+state.dataNews[2].title+'</p>');
+  const column21 = $('<div class="medio-sm"></div>');
+  const imag21 = $('<img src="assets/img/'+state.dataNews[2].img+'" alt="">')
+  const column22 = $('<div class="info-plomo medio-sm"></div>');
+  const text22 = $('<p>'+state.dataNews[2].title+'</p>');
   const column3 = $('<div class="newsmedia medianew col-xs-12 col-md-3 col-lg-3"></div>');
   const column31 = $('<div class="medio-sm"></div>');
-    const imag31 = $('<img src="assets/img/'+state.dataNews[3].img+'" alt="">')
+  const imag31 = $('<img src="assets/img/'+state.dataNews[3].img+'" alt="">')
   const column32 = $('<div class="info-plomo medio-sm"></div>');
-    const text32 = $('<p>'+state.dataNews[3].title+'</p>');
+  const text32 = $('<p>'+state.dataNews[3].title+'</p>');
 
   row.append(column);
   column.append(imagen);

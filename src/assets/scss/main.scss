@@ -151,3 +151,35 @@ img{
   overflow: hidden;
   margin-top: 15px;
 }
+.cont_carousel{
+  margin-top: 20px;
+  padding: 1% 2%;
+  border: 5px solid #F7B617;
+  div.carousel{
+    div.item{
+      height: 220px;
+      div.cont_img{
+        height: 180px;
+        overflow: hidden;
+      }
+      div.text-news_carousel{
+          height: 40px;
+          color: white;
+          background-color:#2B2B2B;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          h3{
+            margin: 0 !important;
+          }
+      }
+
+    }
+  }
+}
+.espacio{
+  height: 50px;
+  width: 100%;
+  background-color: #000;
+}
