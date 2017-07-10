@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     concat = require('gulp-concat'),
     merge = require('merge-stream'),
+    nodemon = require('gulp-nodemon'),
+
     config = {
         source: './src/',
         dist: './public',
@@ -61,34 +63,73 @@ gulp.task("js", () => {
         .pipe(gulp.dest(config.dist + paths.assets + "js"));
 });
 
-// gulp.task("png-watch", ["png"], (done) => {
-//     browserSync.reload();
-//     done();
-// });
-//
-// gulp.task("sass-watch", ["sass"], (done) => {
-//     browserSync.reload();
-//     done();
-// });
-//
-// gulp.task("js-watch", ["js"], (done) => {
-//     browserSync.reload();
-//     done();
-// });
-//
-// gulp.task("html-watch", ["html"], (done) => {
-//     browserSync.reload();
-//     done();
-// });
-//
-// gulp.task("serve", () => {
-//     browserSync.init({
-//         server: {
-//             baseDir: config.dist
-//         }
-//     });
-//     gulp.watch(sources.html, ["html-watch"]);
-//     gulp.watch(sources.sass, ["sass-watch"]);
-//     gulp.watch(sources.png, ["png-watch"]);
-//     gulp.watch(sources.js, ["js-watch"]);
-// });
+gulp.task("png-watch", ["png"], (done) => {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("sass-watch", ["sass"], (done) => {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("js-watch", ["js"], (done) => {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("html-watch", ["html"], (done) => {
+    browserSync.reload();
+    done();
+});
+
+/*
+gulp.task("serve", () => {
+    browserSync.init({
+        server: {
+            baseDir: config.dist
+        }
+    });
+    gulp.watch(sources.html, ["html-watch"]);
+    gulp.watch(sources.sass, ["sass-watch"]);
+    gulp.watch(sources.png, ["png-watch"]);
+    gulp.watch(sources.js, ["js-watch"]);
+});
+*/
+/*
+gulp.task('default', ['browser-sync'], function () {
+});*/
+
+gulp.task('nodemon', function (cb) {
+
+  let started = false;
+
+  return nodemon({
+    script: 'server.js'
+  }).on('start', function () {
+    // to avoid nodemon being started multiple times
+    // thanks @matthisk
+    if (!started) {
+      cb();
+      started = true;
+    }
+  });
+});
+
+gulp.task('serve', ['nodemon'], function() {
+  browserSync.init(null, {
+    //proxy: "http://localhost:5000",
+    files: ["public/**/*.*"],
+    //browser: "google chrome",
+    port: 7000,
+    server: {
+      baseDir: config.dist
+    }
+  });
+  gulp.watch(sources.html, ["html-watch"]);
+  gulp.watch(sources.img, ["png-watch"]);
+  gulp.watch(sources.sass, ["sass-watch"]);
+  gulp.watch(sources.js, ["js-watch"]);
+});
+
+

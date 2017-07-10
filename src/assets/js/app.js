@@ -5,16 +5,17 @@ const render = (root) => {
     container.append(NavBar());
     container.append(Principal());
     container.append(Row1());
-    container.append(Mundo())
+    container.append(Mundo());
     container.append(Row2());
     container.append(RowLG());
     container.append(Tecnologia());
     container.append(Row3());
     container.append(Educacion());
     container.append(Row4());
+    container.append(Footer());
 
     root.append(container);
-}
+};
 
 const state = {
     dataNews: null,

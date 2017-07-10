@@ -1,3 +1,5 @@
+$color-lab: #F7B617;
+
 *{
   margin:0;
   padding: 0;
@@ -13,13 +15,13 @@ $min-large:768px;
 .navbar-toggle{
   border: 0;
   span{
-    background-color: #F7B617 !important;
+    background-color: $color-lab !important;
   }
 }
 .navbar-header{
   border: 0;
   background-color: white;
-  border-bottom: 2px solid #F7B617 !important;
+  border-bottom: 2px solid $color-lab !important;
   .navbar-brand{
     padding: 8px;
   }
@@ -31,7 +33,7 @@ $min-large:768px;
     color:white !important;
     border-radius: 0;
     margin-bottom: 0;
-    background-color: #F7B617 !important;
+    background-color: $color-lab !important;
   }
 }
 .height-header{
@@ -66,8 +68,8 @@ hr{
   margin-top: 0;
   float: left;
   width: 30px;
-  border: 1px solid #F7B617;
-  background-color: #F7B617;
+  border: 1px solid $color-lab;
+  background-color: $color-lab;
 }
 .medioDiv{
   width: 50%;
@@ -150,4 +152,46 @@ img{
   height: 100px;
   overflow: hidden;
   margin-top: 15px;
+}
+
+.back-lab {
+  background-color: $color-lab;
+  color: rgb(255, 255, 255);
+}
+
+.top {
+  overflow: hidden;
+  &__padd {
+    padding: 35px;
+  }
+  &__marg {
+    margin: 21px;
+  }
+  &__flex {
+    display: flex;
+    &--around {
+      justify-content: space-between;
+    }
+    &--center-column {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.imagen__decolorada {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+}
+
+footer img {
+  width: auto;
+}
+
+.border_foot {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
