@@ -113,6 +113,7 @@ img{
     color: white;
     font-size: 19px;
     padding: 16px;
+    position: relative;
   }
 }
 .img-auto{
@@ -126,6 +127,7 @@ img{
   color: white;
   font-size: 19px;
   padding: 16px;
+  position: relative;
 }
 .newsmedia{
   // padding-left: 0;
@@ -182,4 +184,15 @@ img{
   width: 70px;
   right: 40px;
   top: 20px;
+}
+
+.logohoy{
+  width: 80px;
+  text-align: center;
+  background-color: #F7B617;
+  height: 40px;
+  padding: 10px;
+  color: #2B2B2B;
+  position: absolute;
+  top: -25px;
 }
