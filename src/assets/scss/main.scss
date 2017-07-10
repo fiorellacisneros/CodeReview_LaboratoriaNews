@@ -113,6 +113,7 @@ img{
     color: white;
     font-size: 19px;
     padding: 16px;
+    position: relative;
   }
 }
 .img-auto{
@@ -126,6 +127,7 @@ img{
   color: white;
   font-size: 19px;
   padding: 16px;
+  position: relative;
 }
 .newsmedia{
   // padding-left: 0;
@@ -143,6 +145,7 @@ img{
     margin-top: 0;
   }
 }
+
 .row{
   margin-top: 10px;
 }
@@ -150,4 +153,46 @@ img{
   height: 100px;
   overflow: hidden;
   margin-top: 15px;
+}
+
+.padding-r{
+  padding-right: 0px;
+  @media(min-width: $min-large){
+    padding-right: 15px;
+  }
+}
+
+.padding-l{
+  padding-left: 0px;
+  @media(min-width: $min-large){
+    padding-left: 15px;
+  }
+}
+
+.overflow-image{
+  overflow: hidden;
+  height: 350px;
+  @media(min-width: $min-large){
+    overflow:visible;
+    height: 100%;
+  }
+}
+
+.icon-video{
+  display: inline-block;
+  position: absolute;
+  width: 70px;
+  right: 40px;
+  top: 20px;
+}
+
+.logohoy{
+  width: 80px;
+  text-align: center;
+  background-color: #F7B617;
+  height: 40px;
+  padding: 10px;
+  color: #2B2B2B;
+  position: absolute;
+  top: -25px;
 }
