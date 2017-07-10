@@ -109,7 +109,7 @@ const Mundo = () =>{
 const Row2 = () =>{
   const row = $('<div class="row"></div>');
   const columnLeft = $('<div class="col-xs-12 col-md-3 col-lg-3"></div>');
-  const columnL1 = $('<div class="completoDiv"></div>');
+  const columnL1 = $('<div class="overflow-image completoDiv"></div>');
     const imagL1 = $('<img src="assets/img/'+state.dataNews[4].img+'" alt="">')
   const columnL2 = $('<div class="info-plomo completoDiv"></div>');
     const textL2 = $('<p>'+state.dataNews[4].title+'</p>');
@@ -121,7 +121,7 @@ const Row2 = () =>{
 
   const columnCenter = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
 
-    const columnA = $('<div class="completo-sm"></div>');
+    const columnA = $('<div class="medianew padding-r completo-sm"></div>');
     const columnA1 = $('<div class="completoDiv"></div>');
       const imagA1 = $('<img src="assets/img/'+state.dataNews[5].img+'" alt="">')
     const columnA2 = $('<div class="info-plomo completoDiv"></div>');
@@ -134,7 +134,7 @@ const Row2 = () =>{
       columnA.append(columnA2);
       columnA2.append(textA2);
 
-    const columnB = $('<div class="hidden-xs medioDiv"></div>');
+    const columnB = $('<div class="padding-l hidden-xs medioDiv"></div>');
     const columnB1 = $('<div class="completoDiv"></div>');
       const imagB1 = $('<img src="assets/img/'+state.dataNews[6].img+'" alt="">')
     const columnB2 = $('<div class="info-plomo completoDiv"></div>');
@@ -258,7 +258,7 @@ const Row3 =() => {
 
   const columnCenter = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
 
-    const columnA = $('<div class="hidden-xs completo-sm"></div>');
+    const columnA = $('<div class="padding-r hidden-xs completo-sm"></div>');
     const columnA1 = $('<div class="completoDiv"></div>');
       const imagA1 = $('<img src="assets/img/'+state.dataNews[16].img+'" alt="">')
     const columnA2 = $('<div class="info-plomo completoDiv"></div>');
@@ -271,7 +271,7 @@ const Row3 =() => {
       columnA.append(columnA2);
       columnA2.append(textA2);
 
-    const columnB = $('<div class="hidden-xs medioDiv"></div>');
+    const columnB = $('<div class="padding-l hidden-xs medioDiv"></div>');
     const columnB1 = $('<div class="completoDiv"></div>');
       const imagB1 = $('<img src="assets/img/'+state.dataNews[16].img+'" alt="">')
     const columnB2 = $('<div class="info-plomo completoDiv"></div>');
@@ -322,7 +322,7 @@ const Row4 =() =>{
   const row = $('<div class="row"></div>');
   const columnCenter = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
 
-    const columnA = $('<div class="completo-sm"></div>');
+    const columnA = $('<div class="padding-r completo-sm"></div>');
     const columnA1 = $('<div class="completoDiv"></div>');
       const imagA1 = $('<img src="assets/img/'+state.dataNews[19].img+'" alt="">')
     const columnA2 = $('<div class="info-plomo completoDiv"></div>');
@@ -335,7 +335,7 @@ const Row4 =() =>{
       columnA.append(columnA2);
       columnA2.append(textA2);
 
-    const columnB = $('<div class="completo-sm"></div>');
+    const columnB = $('<div class="medianew padding-l completo-sm"></div>');
     const columnB1 = $('<div class="completoDiv"></div>');
       const imagB1 = $('<img src="assets/img/'+state.dataNews[20].img+'" alt="">')
     const columnB2 = $('<div class="info-plomo completoDiv"></div>');
@@ -361,7 +361,7 @@ const Row4 =() =>{
 
       const columnM = $('<div class="col-xs-12 col-md-6 col-lg-6"></div>');
 
-        const columnBA = $('<div class="hidden-xs completo-sm"></div>');
+        const columnBA = $('<div class="padding-r hidden-xs completo-sm"></div>');
         const columnBA1 = $('<div class="completoDiv"></div>');
           const imagBA1 = $('<img src="assets/img/'+state.dataNews[22].img+'" alt="">')
         const columnBA2 = $('<div class="info-plomo completoDiv"></div>');
@@ -374,7 +374,7 @@ const Row4 =() =>{
           columnBA.append(columnBA2);
           columnBA2.append(textBA2);
 
-        const columnBB = $('<div class="hidden-xs completo-sm"></div>');
+        const columnBB = $('<div class="padding-l hidden-xs completo-sm"></div>');
         const columnBB1 = $('<div class="completoDiv"></div>');
           const imagBB1 = $('<img src="assets/img/'+state.dataNews[23].img+'" alt="">')
         const columnBB2 = $('<div class="info-plomo completoDiv"></div>');
