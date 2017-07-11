@@ -1,74 +1,63 @@
 
 const Header = () =>{
+  const dias_semana = new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+  const meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre", "Diciembre");
+  const fecha_actual = new Date();
+  const fecha = dias_semana[fecha_actual.getDay()] + ", " + fecha_actual.getDate() + " de " + meses[fecha_actual.getMonth()] + " de " + fecha_actual.getFullYear();
+
   const top = $('<div class="hidden-xs center height-header"></div>');
+  const topNav = $(' <div class="flex space-between hidden-sm hidden-xs">'+
+                          '<div class="inline">' +
+                            '<div class="inline"><img src="assets/img/menu.png" class="img-topnav" alt="menu">SECTIONS</div>'+
+                            '<div class="inline"><img src="assets/img/search.png" class="img-topnav" alt="menu">SEARCH</div>'+
+                          '</div>'+
+                          '<div class="redes_sociales inline">'+
+                          '<img src="assets/img/fb.png" class="img-topnav" alt="menu"><img src="assets/img/tw.png" class="img-topnav" alt="menu"><img src="assets/img/in.png" class="img-topnav" alt="menu">'+
+                          '</div>'+
+                      '</div>');
+  const div = $('<div class="date"><span class="">'+fecha+' | </span><img src="assets/img/cloud.png" class="img-topnav" alt=""><span class="">22°</span> </div>');
   const img = $('<img class="img-auto" src="assets/img/logoicon.png" alt="">');
+  top.append(topNav);
   top.append(img);
+  top.append(div);
   return top;
 }
 
 const NavBar = () =>{
-  const nav = $('<nav class="navbar navbar-fixed-top"></nav>');
-  const container  = $('<div class="container-fluid"></div>');
-  const navHeader  = $('<div class="navbar-header"></div>');
-  const btntoggle = $('<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"></button>');
-  const a = $('<a class="navbar-brand hidden-xs" href="#"></a>');
-
-  nav.append(container);
-  container.append(navHeader);
-  navHeader.append(btntoggle);
-  navHeader.append(a);
-
-  const span1 = $('<span class="sr-only">Toggle navigation</span>');
-  const span2 = $('<img src="assets/img/menu.png" style="height:30px;" alt="">');
-  const img = $('<img src="assets/img/logoicon.png" style="height:40px;" alt="">');
-
-  btntoggle.append(span1);
-  btntoggle.append(span2);
-  btntoggle.append(img);
-
-  const abrand = $('<img src="assets/img/menu.png" style="height:30px;" alt=""><span class=""> SECTIONS</span>');
-  a.append(abrand);
-
-  const divCollapse = $('<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div>');
-  const ul1 = $('<ul class="nav navbar-nav hidden-xs"></ul>');
-  const li1 = $('<li class="active"></li>');
-  const span3 = $('<img src="assets/img/search.png" style="height:40px;" alt=""><span class=""> SEARCH</span>');
-  const hr  = $('<hr>');
-  container.append(divCollapse);
-  container.append(hr);
-  divCollapse.append(ul1);
-  ul1.append(li1);
-  li1.append(span3);
-
-  const ul2 = $('<ul class="nav navbar-nav navbar-right hidden-xs"></ul>');
-  const li2 = $('<li></li>');
-  const img1 = $('<img src="assets/img/fb.png" alt="">');
-  const li3 = $('<li></li>');
-  const img2 = $('<img src="assets/img/tw.png" alt="">');
-  const li4 = $('<li></li>');
-  const img3 = $('<img src="assets/img/in.png" alt="">');
-
-  divCollapse.append(ul2);
-  ul2.append(li2);
-  ul2.append(li3);
-  ul2.append(li4);
-  li2.append(img1);
-  li3.append(img2);
-  li4.append(img3);
-  const ul3 = $('<ul class="hidden-md hidden-lg"></ul>');
-  const li5 = $('<li>Lo ultimo</li>');
-  const li6 = $('<li>Opinión</li>');
-  const li7 = $('<li>Cultura</li>');
-  const li8 = $('<li>Peru</li>');
-  const li9 = $('<li>Tecnologia</li>');
-  const li10 = $('<li>Mundo</li>');
-  const li11 = $('<li>Economia</li>');
-  const li12 = $('<li>Lyfestyle</li>');
-  const li13 = $('<li>Deporte</li>');
-  divCollapse.append(ul3);
-  ul3.append(li5,li6,li7,li8,li9,li10,li11,li12,li13);
-
-  return nav;
+  const navbarlarge = $('<nav class="navbar navbar-default"></nav>');
+  const container = $('<div class="container-fluid"></div>');
+  const barHeader = $('<div class="navbar-header"></div>');
+    const button = $('<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"></button>');
+    const span = $('<span class="sr-only">Toggle navigation</span>');
+    const span1 = $('<span class="icon-bar"></span>');
+    const span2 = $('<span class="icon-bar"></span>');
+    const span3 = $('<span class="icon-bar"></span>');
+  const logoXs = $('<div class="navbar-brand visible-xs" href="#"></div>');
+    const imagen = $('<img src="assets/img/logoicon.png" alt="">');
+  const collapse = $('<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div>');
+    const ul = $('<ul class="nav navbar-nav"></ul>');
+    const li1 = $('<li><a href="#">Lo Último <span class="sr-only">(current)</span></a></li>');
+    const li2 = $('<li><a href="#">Opinión</a></li>');
+    const li3 = $('<li><a href="#">Cultura</a></li>');
+    const li4 = $('<li><a href="#">Perú</a></li>');
+    const li5 = $('<li><a href="#">Tecnología</a></li>');
+    const li6 = $('<li><a href="#">Mundo</a></li>');
+    const li7 = $('<li><a href="#">Economía</a></li>');
+    const li8 = $('<li><a href="#">LifeStyle</a></li>');
+    const li9 = $('<li><a href="#">Deporte</a></li>');
+  navbarlarge.append(container);
+  container.append(barHeader);
+  barHeader.append(button);
+  button.append(span);
+  button.append(span1);
+  button.append(span2);
+  button.append(span3);
+  barHeader.append(logoXs);
+  logoXs.append(imagen);
+  container.append(collapse);
+  collapse.append(ul);
+  ul.append(li1, li2, li3, li4, li5, li6, li7, li8, li9);
+  return navbarlarge;
 }
 
 const Principal = () =>{

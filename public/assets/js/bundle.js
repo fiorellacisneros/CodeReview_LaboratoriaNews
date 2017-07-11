@@ -2420,9 +2420,26 @@ const Footer = () => {
 };
 
 const Header = () =>{
+  const dias_semana = new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+  const meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre", "Diciembre");
+  const fecha_actual = new Date();
+  const fecha = dias_semana[fecha_actual.getDay()] + ", " + fecha_actual.getDate() + " de " + meses[fecha_actual.getMonth()] + " de " + fecha_actual.getFullYear();
+
   const top = $('<div class="hidden-xs center height-header"></div>');
+  const topNav = $(' <div class="flex space-between hidden-sm hidden-xs">'+
+                          '<div class="inline">' +
+                            '<div class="inline"><img src="assets/img/menu.png" class="img-topnav" alt="menu">SECTIONS</div>'+
+                            '<div class="inline"><img src="assets/img/search.png" class="img-topnav" alt="menu">SEARCH</div>'+
+                          '</div>'+
+                          '<div class="redes_sociales inline">'+
+                          '<img src="assets/img/fb.png" class="img-topnav" alt="menu"><img src="assets/img/tw.png" class="img-topnav" alt="menu"><img src="assets/img/in.png" class="img-topnav" alt="menu">'+
+                          '</div>'+
+                      '</div>');
+  const div = $('<div class="date"><span class="">'+fecha+' | </span><img src="assets/img/cloud.png" class="img-topnav" alt=""><span class="">22°</span> </div>');
   const img = $('<img class="img-auto" src="assets/img/logoicon.png" alt="">');
+  top.append(topNav);
   top.append(img);
+  top.append(div);
   return top;
 }
 
