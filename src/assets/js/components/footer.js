@@ -2,7 +2,7 @@
 
 const Footer = () => {
     const footer = $('<footer></footer>');
-    const divprinc = $('<div class="back-lab col-xs-12"></div>'); 
+    const divprinc = $('<div class="back-lab col-xs-12"></div>');
     const divcon = $('<div class="back-lab top__padd"></div>');
     const div = $('<div class=""></div>');
     const div1 = $('<div class="col-xs-12 col-sm-4 top__flex top__flex--center-column"></div>');
@@ -20,7 +20,7 @@ const Footer = () => {
     const view_more = $('<div class="visible-xs center"><hr><a href="#">Ver más</a></div>');
 
     footer.append(pull_right);
-    footer.append(divprinc);  
+    footer.append(divprinc);
     divprinc.append(divcon);
     divcon.append(div);
     div.append(div1);
@@ -35,7 +35,5 @@ const Footer = () => {
     footSocial.append(fb);
     footSocial.append(tw);
     footSocial.append(din);
-
-
     return footer;
 };
